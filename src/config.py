@@ -11,7 +11,7 @@ FOLDER_GRAFIK = ROOT / "reports" / "figures"
 
 
 
-FITUR = ["ispu_hari_ini", "ispu_kemarin", "bulan"]
+FITUR = ["ispu_hari_ini", "ispu_kemarin", "bulan", "hari"]
 TARGET = "ispu_besok"
 KOLOM_ID = ["tanggal", "stasiun"]
 

@@ -1,0 +1,32 @@
+RINGKASAN DATA - prepare_data.ipynb
+============================================================
+Sumber : Kaggle 'Air Quality Index in Jakarta (2010-2021)' oleh senadu34
+         (asal data: Satu Data Jakarta), ispu_dki1.csv s.d. ispu_dki5.csv
+Periode: 2010-01-02 s.d. 2025-02-27
+Stasiun: 5
+Catatan: tahun 2022 tidak tersedia di dataset per stasiun
+
+Baris awal (5 file)  : 25865
+  dibuang - tanggal/stasiun kosong: 0
+  dibuang - baris double (tanggal & stasiun sama): 0
+  dibuang - tidak ada pengukuran (TIDAK ADA DATA / max 0 / kosong): 2409
+  dibuang - ISPU di atas 500 (tidak wajar): 0
+  dibuang - angka max & label kategori tidak cocok (data rusak): 168
+Baris valid          : 23288
+Baris data_siap.csv  : 22835
+
+Kolom : ['tanggal', 'stasiun', 'ispu_hari_ini', 'ispu_kemarin', 'bulan', 'hari', 'ispu_besok']
+
+Per stasiun:
+  DKI1 (Bunderan HI)      4898 baris (2010-01-02 s.d. 2025-02-27)
+  DKI2 (Kelapa Gading)    4725 baris (2010-11-05 s.d. 2025-02-27)
+  DKI3 (Jagakarsa)        4629 baris (2010-11-08 s.d. 2025-02-27)
+  DKI4 (Lubang Buaya)     4604 baris (2010-11-05 s.d. 2025-02-27)
+  DKI5 (Kebon Jeruk)      3979 baris (2012-11-28 s.d. 2025-02-27)
+
+Distribusi kategori ISPU besok (data tidak seimbang):
+  SEDANG                15638 (68.5%)
+  BAIK                   4103 (18.0%)
+  TIDAK SEHAT            2894 (12.7%)
+  SANGAT TIDAK SEHAT      199 (0.9%)
+  BERBAHAYA                 1 (0.0%)
