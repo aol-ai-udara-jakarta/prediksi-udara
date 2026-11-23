@@ -32,8 +32,7 @@ Project ini kami buat untuk tugas AOL mata kuliah *Artificial Intelligence*, mul
 **Solusi kami.** Kami melatih model *machine learning* dari data ISPU bertahun-tahun untuk menebak kondisi udara **besok**. Dengan begitu, warga punya waktu untuk bersiap, misalnya memakai masker, mengurangi olahraga di luar, atau menutup jendela, sebelum udara memburuk.
 
 **Kaitan dengan SDG.**
-- **SDG 3 (Kehidupan Sehat dan Sejahtera):** membantu mengurangi paparan polusi udara, terutama bagi kelompok rentan seperti anak-anak, lansia, dan penderita asma.
-- **SDG 11 (Kota dan Permukiman yang Berkelanjutan):** memberi informasi kualitas udara kota yang lebih bisa ditindaklanjuti.
+Project ini menjawab **SDG 11 (Kota dan Permukiman yang Berkelanjutan)**, pada permasalahan **polusi udara di wilayah padat penduduk** (*air pollution in densely populated areas*). Prediksi kualitas udara besok membantu warga Jakarta mengambil tindakan pencegahan sebelum terpapar udara buruk. Secara tidak langsung, project ini juga mendukung **SDG 3 (Kehidupan Sehat dan Sejahtera)** dengan membantu kelompok rentan seperti anak-anak, lansia, dan penderita asma.
 
 ---
 
@@ -73,7 +72,9 @@ Semua konstanta yang dipakai bersama, seperti lokasi file, daftar fitur, dan atu
 
 ### Sumber
 
-Kami memakai dataset Kaggle *Air Quality Index in Jakarta (2010–2021)* oleh **senadu34**. Data aslinya berasal dari **Satu Data Jakarta**. Dataset ini terdiri dari 5 file CSV, satu untuk setiap stasiun pemantau:
+Kami memakai dataset Kaggle *Air Quality Index in Jakarta (2010–2021)* oleh **senadu34**. Data aslinya berasal dari **Satu Data Jakarta**. Dataset ini terdiri dari 5 file CSV, satu untuk setiap stasiun pemantau.
+
+Meskipun judul dataset menyebut periode 2010–2021, file yang kami unduh dari Kaggle sudah berisi data hingga Februari 2025 karena dataset tersebut telah diperbarui oleh pembuatnya. Kami memakai kelima file itu apa adanya, tanpa menambahkan data dari sumber lain.
 
 | Stasiun | Lokasi | Rentang data dipakai |
 |---|---|---|
@@ -374,7 +375,6 @@ Kami ingin jujur soal batas kemampuan model ini:
 ## 12. Pengembangan berikutnya
 
 - **Data real-time:** menyambungkan aplikasi ke sumber ISPU terbaru supaya "hari ini" benar-benar hari ini.
-- **Fitur cuaca:** menambahkan prakiraan hujan dan angin untuk membantu menangkap lonjakan mendadak.
 - **Prediksi lebih dari satu hari:** misalnya perkiraan 3 hari ke depan.
 - **Notifikasi:** memberi peringatan otomatis saat besok diperkirakan Tidak Sehat.
 - **Deploy:** menerbitkan aplikasi ke Streamlit Community Cloud agar bisa diakses publik.
