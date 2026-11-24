@@ -364,7 +364,7 @@ Kolom harus bernama dan berurutan persis seperti `FITUR` di `src/config.py`.
 
 Kami ingin jujur soal batas kemampuan model ini:
 
-- **Lonjakan mendadak sulit ditebak.** Di data uji, 53% hari Tidak Sehat datang setelah hari yang masih ≤ 100. Tanpa informasi tambahan seperti cuaca, arah angin, atau kejadian emisi, model yang hanya melihat riwayat ISPU secara alami akan kesulitan menangkap lonjakan seperti ini. Kami sempat mencoba menambah fitur (lag 2 hari, rata-rata 7 hari, identitas stasiun, data cuaca ERA5), tetapi peningkatannya hanya sekitar 0,5 poin akurasi. Itu tidak sepadan dengan kerumitan menyambungkan API cuaca ke aplikasi.
+- **Lonjakan mendadak sulit ditebak.** Di data uji, 53% hari Tidak Sehat datang setelah hari yang masih ≤ 100. Karena model hanya melihat riwayat ISPU dan informasi waktu, lonjakan seperti ini secara alami sulit ditangkap.
 - **Akurasi kategori sekitar 80%.** Ini wajar untuk prediksi kualitas udara harian dengan fitur sesederhana ini. Di beberapa stasiun (misalnya DKI3), akurasinya mencapai 87,8%.
 - **Salah diam lebih berbahaya daripada salah alarm.** Kesalahan paling berbahaya adalah model bilang "Sedang" padahal besok Tidak Sehat, sehingga kelompok rentan tetap beraktivitas di luar tanpa perlindungan. Karena itu, kami sengaja membuat model sedikit lebih waspada, dengan konsekuensi beberapa alarm palsu.
 - **Hanya 5 titik pengukuran.** Pola polusi antarwilayah sangat berbeda (DKI4 jauh lebih sering Tidak Sehat dibanding DKI1). Prediksi satu stasiun belum tentu mewakili kualitas udara di seluruh lingkungan sekitarnya.

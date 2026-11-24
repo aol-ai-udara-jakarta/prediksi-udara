@@ -131,9 +131,8 @@ Setelah dipilih, model dilatih ulang pada seluruh data latih dan dievaluasi pada
 - Pada stasiun yang jarang mengalami hari Tidak Sehat (DKI1 & DKI3), sebagian besar kejadian Tidak Sehat berupa lonjakan singkat sehingga lebih sulit diprediksi hanya dari histori ISPU.
 
 ### 4.2 Keterbatasan Model & Catatan Target Rubrik "85%"
-1. **Lonjakan mendadak (53,1%):** di data uji, **53,1%** hari Tidak Sehat terjadi setelah hari yang ISPU-nya masih ≤ 100. Karena model hanya melihat riwayat ISPU, lonjakan seperti ini sulit diprediksi. Peningkatan deteksi hari Tidak Sehat kemungkinan memerlukan data tambahan, seperti data cuaca atau kejadian emisi.
-2. **Fitur yang belum diuji:** model hanya menggunakan riwayat ISPU dan informasi waktu. Penambahan fitur lain, seperti data cuaca (hujan, angin, suhu) atau rata-rata ISPU beberapa hari, belum diuji dan menjadi rencana pengembangan berikutnya.
-3. **Target rubrik "85% akurat":** pada seluruh eksperimen (termasuk model non-linear seperti Random Forest dan Gradient Boosting), akurasi kategori maksimal di data uji berada di **80,4%–82,2%** (meski pada stasiun tertentu seperti DKI3 mencapai 87,8%). Hal ini wajar untuk peramalan kualitas udara harian berfitur historis singkat dan menunjukkan perlunya transparansi keterbatasan model saat presentasi.
+1. **Lonjakan mendadak (53,1%):** di data uji, **53,1%** hari Tidak Sehat terjadi setelah hari yang ISPU-nya masih ≤ 100. Karena model hanya melihat riwayat ISPU dan informasi waktu, lonjakan seperti ini sulit diprediksi, sehingga batas atas deteksi hari Tidak Sehat secara alami terbatas.
+2. **Target rubrik "85% akurat":** pada seluruh eksperimen (termasuk model non-linear seperti Random Forest dan Gradient Boosting), akurasi kategori maksimal di data uji berada di **80,4%–82,2%** (meski pada stasiun tertentu seperti DKI3 mencapai 87,8%). Hal ini wajar untuk peramalan kualitas udara harian berfitur historis singkat dan menunjukkan perlunya transparansi keterbatasan model saat presentasi.
 
 ---
 
